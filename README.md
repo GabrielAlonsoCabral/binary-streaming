@@ -11,3 +11,6 @@ This repository runs binaries conversions inject Rust conversion binary codes in
 
 2. **Binary to Text**
    - Convert your binary text in text message.
+
+2. **Decimal To Binary**
+   - Convert your decimal number to binary.
