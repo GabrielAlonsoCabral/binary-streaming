@@ -13,4 +13,8 @@ log("Test: [textToBinary] - status: ", messageInBinary===textMessageInBinary ? "
 const messageInText = binaryStreaming.binaryToText(messageInBinary);
 log("Test: [binaryToText] - status: ", messageInText===textMessage ? "Ok" :"Failed")
 
+log("Test: [decimalToBinary] - status(1): ", binaryStreaming.decimalToBinary(10)==="1010" ? "Ok" :"Failed")
+log("Test: [decimalToBinary] - status(2): ", binaryStreaming.decimalToBinary(9)==="1001" ? "Ok" :"Failed")
+log("Test: [decimalToBinary] - status(3): ", binaryStreaming.decimalToBinary(26)==="11010" ? "Ok" :"Failed")
+
 log("[BinaryStreaming] - Test finished!")
