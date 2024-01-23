@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          token: ${{ secrets.gh_token }}
 
       - name: Setup Node
         uses: actions/setup-node@v3
