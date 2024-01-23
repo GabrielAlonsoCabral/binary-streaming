@@ -1,4 +1,6 @@
+mod utils;
 use neon::prelude::*;
+use utils::{get_quotient, get_remainder};
 
 pub fn text_to_binary(mut cx: FunctionContext) -> JsResult<JsString> {
     let input_str: String = cx.argument::<JsString>(0)?.value(&mut cx);
@@ -34,14 +36,6 @@ pub fn binary_to_text(mut cx: FunctionContext) -> JsResult<JsString> {
     }
 
     Ok(cx.string(text))
-}
-
-fn get_quotient(a: u32, b: u32) -> u32 {
-    return a / b;
-}
-
-fn get_remainder(a: u32, b: u32) -> u32 {
-    return a % b;
 }
 
 fn rust_decimal_to_binary(decimal_number: u32, mut binary_string: String) -> String {
